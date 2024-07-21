@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Machine Learning Portfolio</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        color: #333;
+      }
+
+      header {
+        background-color: #6a1b9a;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.5em;
+        animation: fadeIn 2s;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      nav ul li {
+        display: inline;
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2em;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #ffeb3b;
+      }
+
+      section {
+        padding: 20px;
+        margin: 20px 10%;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      }
+
+      section h2 {
+        margin-top: 0;
+        color: #6a1b9a;
+      }
+
+      .project {
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      form label {
+        margin: 10px 0 5px;
+      }
+
+      form input,
+      form textarea {
+        padding: 10px;
+        border: 2px solid #6a1b9a;
+        border-radius: 5px;
+      }
+
+      form button {
+        padding: 10px 20px;
+        background-color: #6a1b9a;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: background-color 0.3s;
+      }
+
+      form button:hover {
+        background-color: #8e24aa;
+      }
+
+      footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #6a1b9a;
+        color: #fff;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInLeft {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideInRight {
+        from {
+          transform: translateX(100%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+
+      .animate__fadeIn {
+        animation: fadeIn 2s;
+      }
+
+      .animate__slideInLeft {
+        animation: slideInLeft 1s;
+      }
+
+      .animate__slideInRight {
+        animation: slideInRight 1s;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="animate__fadeIn">Machine Learning Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section id="about" class="animate__slideInLeft">
+        <h2>About Me</h2>
+        <p>
+          Hello! I'm a machine learning enthusiast with experience in various ML
+          projects...
+        </p>
+      </section>
+
+      <section id="projects" class="animate__slideInRight">
+        <h2>Projects</h2>
+        <div class="project">
+          <h3>Project 1</h3>
+          <p>Project description...</p>
+        </div>
+        <div class="project">
+          <h3>Project 2</h3>
+          <p>Project description...</p>
+        </div>
+        <!-- Add more projects as needed -->
+      </section>
+
+      <section id="skills" class="animate__slideInLeft">
+        <h2>Skills</h2>
+        <ul>
+          <li>Python</li>
+          <li>TensorFlow</li>
+          <li>PyTorch</li>
+          <li>Data Analysis</li>
+          <!-- Add more skills as needed -->
+        </ul>
+      </section>
+
+      <section id="contact" class="animate__slideInRight">
+        <h2>Contact</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Machine Learning Portfolio</p>
+    </footer>
+  </body>
+</html>
