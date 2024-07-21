@@ -4,7 +4,7 @@ import json
 
 def handler(event, context):
 
-    body = json.loads(event)
+    body = event  # json.loads(event)
     model = load("titanic_model.sav")
 
     sex = body["sex"]
@@ -18,4 +18,10 @@ def handler(event, context):
     ]
     survived = model.predict(X)
 
-    return {"statusCode": 200, "body": "not survived" if survived == 0 else "survived"}
+    return {
+        "statusCode": 200,
+        "body": "not survived" if survived == 0 else "survived",
+        "input-sex": sex,
+        "input-pclass": pclass,
+        "test": "rawr",
+    }

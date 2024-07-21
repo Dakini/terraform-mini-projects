@@ -23,6 +23,10 @@ module "lambda" {
   environment = var.environment
 }
 
+output "aws_docker_uri" {
+  value = module.lambda.lambda_image_uri
+}
+
 module "api_gateway" {
   source            = "./modules/api_gateway"
   environment       = var.environment

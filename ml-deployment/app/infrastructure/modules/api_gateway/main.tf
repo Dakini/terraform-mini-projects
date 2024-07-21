@@ -26,7 +26,6 @@ type="AWS_PROXY"
 uri = var.lambda_invoke_arn
 }
 
-
 resource "aws_api_gateway_deployment" "example" {
   rest_api_id = aws_api_gateway_rest_api.api.id
 
@@ -37,7 +36,8 @@ resource "aws_api_gateway_deployment" "example" {
   lifecycle {
     create_before_destroy = true
   }
-}   
+}
+  
 resource "aws_api_gateway_stage" "development" {
   deployment_id = aws_api_gateway_deployment.example.id
   rest_api_id   = aws_api_gateway_rest_api.api.id
