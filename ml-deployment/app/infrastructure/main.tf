@@ -23,9 +23,9 @@ module "lambda" {
   environment = var.environment
 }
 
-# module "api_gateway" {
-#     soure = "./modules/api_gateway"
-#     environment = var.environment
-#     lambda_invoke_arn = module.lambda.lambda_invoke_arn
+module "api_gateway" {
+  source            = "./modules/api_gateway"
+  environment       = var.environment
+  lambda_invoke_arn = module.lambda.lambda_invoke_arn
 
-# }
+}
