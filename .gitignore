@@ -167,3 +167,6 @@ cython_debug/
 # .tfstate files
 *.tfstate
 *.tfstate.*
+
+# ignore my run.sh
+run.sh
