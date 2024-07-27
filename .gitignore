@@ -170,3 +170,5 @@ cython_debug/
 
 # ignore my run.sh
 run.sh
+
+.DS_store
