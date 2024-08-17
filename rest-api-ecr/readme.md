@@ -4,8 +4,17 @@ This folder creates a docker image and uploads to AWS ECR image, and creates a l
 
 To set up the project.
 
+first train the model
+
 ```bash
-cd infrastructure
+ cd src
+ python train_model.py
+```
+
+Then set up the infrastructure for ECR, lambda function and api_gateway
+
+```bash
+cd ../infrastructure
 terraform init
 terraform apply
 
